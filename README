@@ -1,0 +1,26 @@
+This git repository contains the software for the master's thesis
+"Efficient Valuation of Swing Option" by Helmut Maierthaler.
+
+Required packages:
+- FLENS
+- GSL
+- OpenMP
+
+Configuration:
+The number of threads and the path to the FLENS directory need to be 
+set in the Makefile.
+
+
+To build the project just run 'make'. Run the program with
+./pidefem n m p R G M Y
+
+where
+n: discretization level of the log price domain
+m: discretization level of the time interval
+R: truncation parameter
+G,M,Y: parameters of the (CGMY) jump intensity
+
+Example: ./pidefem 100 100 2 6 2.5 3 0.2
+
+Other parameters like sigma, lambda, r and the strikes can be configured 
+in 'pidefem.cc'.
